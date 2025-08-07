@@ -1,0 +1,144 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.calculator {
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 60vw;
+    max-width: 400px;
+    height: auto;
+}
+
+#inputBox {
+    width: 100%;
+    height: 60px;
+    background-color: #b6b6c5;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 24px;
+    color: #8c2323;
+    text-align: right;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* vertical spacing between lines */
+}
+
+/* Each row: horizontal flexbox */
+.firstline,
+.secondline,
+.thirdline,
+.fourthline,
+.fifthline {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* spacing between buttons */
+}
+
+/* Button base styling */
+button {
+    flex: 1;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3e3e5e;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button spacing fix */
+button:not(:last-child) {
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #57577d;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+/* 🎨 Special buttons */
+.ac { /* AC */
+    background-color: #d32f2f;
+}
+.ac:hover {
+    background-color: #e53935;
+}
+
+.de{ /* DE */
+    background-color: #f4511e;
+}
+.de:hover {
+    background-color: #ff7043;
+}
+
+button.mol { /* % */
+    background-color: #0277bd;
+}
+button.mol:hover {
+    background-color: #0288d1;
+}
+
+button.div { /* / */
+    background-color: #0277bd;
+}
+button.div:hover {
+    background-color: #0288d1;
+}
+
+button.mul { /* * */
+    background-color: #0277bd;
+}
+button.mul:hover {
+    background-color: #0288d1;
+}
+
+button.sub { /* - */
+    background-color: #0277bd;
+}
+button.sub:hover {
+    background-color: #0288d1;
+}
+
+button.add { /* + */
+    background-color: #1565c0;
+}
+button.add:hover {
+    background-color: #1976d2;
+}
+
+button.equal {
+    background-color: #f9a825;
+    color: #000;
+}
+button.equal:hover {
+    background-color: #fbc02d;
+}
